@@ -12,7 +12,7 @@ const ListMessages = () => {
   }, []) 
   return (
     <section>
-      {isFetching && <h3>Loading...</h3>}
+      {isFetching && <h2>Loading...</h2>}
       {error && <h3>{JSON.stringify(error)}</h3>}
       <ul>
         {messages.length > 0 &&

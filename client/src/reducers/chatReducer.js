@@ -20,6 +20,7 @@ export default function chatReducer(state = initialState, action){
       return produce(state, (draftState)=>{
         draftState.isFetching = false
         draftState.messages.push(message)
+        draftState.error=null
       })
     }
     case ACTIONS.GET_MESSAGES_SUCCESS:{
@@ -27,6 +28,7 @@ export default function chatReducer(state = initialState, action){
       return produce(state, (draftState)=>{
         draftState.isFetching = false
         draftState.messages.push(...messages)
+        draftState.error=null
       })
     }
     case ACTIONS.CREATE_MESSAGE_ERROR:
